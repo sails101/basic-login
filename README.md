@@ -93,17 +93,16 @@ Now that we have a backend with nice-looking routes, and we have our views hooke
 <h1>Login</h1>
 <form action="/login" method="post">
 
-  <label for="username">Username</label>
-  <input name="username" type="text"/>
+  <label for="email">Your email address?</label>
+  <input name="email" type="text"/>
   <br/>
 
-  <label for="password">Password</label>
+  <label for="password">Your safe word?</label>
   <input name="password" type="password"/>
   <br/>
 
   <input type="submit"/>
 </form>
-
 ```
 
 
@@ -116,8 +115,12 @@ Now that we have a backend with nice-looking routes, and we have our views hooke
 <h1>Signup</h1>
 <form action="/signup" method="post">
 
-  <label for="username">Choose a Username</label>
-  <input name="username" type="text"/>
+  <label for="name">What's your name?</label>
+  <input name="name" type="text"/>
+  <br/>
+
+  <label for="email">What's your email?</label>
+  <input name="email" type="text"/>
   <br/>
 
   <label for="password">Choose a Password</label>
@@ -126,6 +129,7 @@ Now that we have a backend with nice-looking routes, and we have our views hooke
 
   <input type="submit"/>
 </form>
+
 ```
 
 
