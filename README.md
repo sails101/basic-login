@@ -1,18 +1,18 @@
-# using-passport
+# basic-login
 
 > a [training vessel](https://github.com/sails101) with [Sails](http://sailsjs.org)
 
 
-For many Sails apps, Passport is overkill- it's quite easy to set up local authentication yourself using only `req.session`.
-
-But in scenarios where you're doing authentication across multiple providers, Passport can make sense, and save you a lot of time.
-
-This tutorial takes advantage of a quick passport hook I put together to eliminate some of the more confusing aspects of integration with Sails from user-space.  For an in-depth tutorial on how the hook ended up getting built, check out [ORIGINAL_PREHOOK_WALKTHROUGH.md](https://github.com/sails101/using-passport/blob/master/ORIGINAL_PREHOOK_WALKTHROUGH.md).
+This is an example of a simple device-agnostic backend that implements login, signup, and logout.  It supports requests from cURL, AJAX, WebSockets, and whatever else you might want to throw at it.  It includes some traditional web forms for kicks.
 
 
-## Step 1: Install the passport hook
+## Step 1: Clone the project and stuff
 
-TODO: ...
+```shell
+$ git clone git@github.com:sails101/basic-login.git
+$ cd basic-login
+$ npm install
+```
 
 ## Step 2: Create `User.js` and `UserController.js`
 
@@ -27,48 +27,15 @@ Now let's build each of the API actions.
 
 ## Step 3: Login
 
-If the user login is successful, we'll redirect to `/`.
-
-```js
-/**
- * `UserController.login()`
- */
-login: function (req, res) {
-  return res.login({
-    successRedirect: '/'
-  });
-},
-```
+TODO: explain
 
 ## Step 5: Logout
 
-```
-/**
- * `UserController.logout()`
- */
-logout: function (req, res) {
-  req.logout();
-  return res.ok('Logged out successfully.');
-},
-```
+TODO: explain
 
 ## Step 6: Signup
 
-```js
-/**
- * `UserController.signup()`
- */
-signup: function (req, res) {
-  User.create(req.params.all()).exec(function (err, user) {
-    if (err) return res.negotiate(err);
-    req.login(user, function (err){
-      if (err) return res.negotiate(err);
-      return res.redirect('/welcome');
-    });
-  });
-}
-```
-
+TODO: explain
 
 #### Now what?
 
