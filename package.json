@@ -1,11 +1,11 @@
 {
-  "name": "using-passport",
+  "name": "basic-login",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
-    "sails": "~0.10.3",
+    "sails": "~0.11.4",
     "sails-disk": "~0.10.0",
     "rc": "~0.5.0",
     "include-all": "~0.1.3",
